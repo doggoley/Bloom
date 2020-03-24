@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		176980722429643C009BE323 /* Bloom.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 176980702429643C009BE323 /* Bloom.xcdatamodeld */; };
 		179994DA23F8731F00902A69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179994D923F8731F00902A69 /* AppDelegate.swift */; };
 		179994DC23F8731F00902A69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179994DB23F8731F00902A69 /* SceneDelegate.swift */; };
 		179994E123F8731F00902A69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179994E023F8731F00902A69 /* ContentView.swift */; };
@@ -14,16 +15,15 @@
 		179994E623F8733400902A69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 179994E523F8733400902A69 /* Preview Assets.xcassets */; };
 		179994E923F8733400902A69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179994E723F8733400902A69 /* LaunchScreen.storyboard */; };
 		179994F123F8740F00902A69 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179994F023F8740F00902A69 /* Board.swift */; };
-		17B04D4A23F881CE0028F43C /* BoardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B04D4923F881CE0028F43C /* BoardStore.swift */; };
-		17B04D4C23F881E80028F43C /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B04D4B23F881E80028F43C /* BoardView.swift */; };
-		17B04D4E23F881FC0028F43C /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B04D4D23F881FC0028F43C /* PostView.swift */; };
-		17B04D5023F882130028F43C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B04D4F23F882130028F43C /* SettingsView.swift */; };
-		17B04D5223F882210028F43C /* AddBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B04D5123F882210028F43C /* AddBoardView.swift */; };
-		17B04D5523F8877F0028F43C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17B04D5323F8877F0028F43C /* Model.xcdatamodeld */; };
-		17B04D5723F88B7B0028F43C /* Board+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B04D5623F88B7B0028F43C /* Board+Extensions.swift */; };
+		17DA64B1242967D800926A31 /* AddBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DA64B0242967D800926A31 /* AddBoardView.swift */; };
+		17F08D9C24297F0A008ED42B /* BoardFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F08D9B24297F0A008ED42B /* BoardFetcher.swift */; };
+		17F08D9E24298AB7008ED42B /* String+HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F08D9D24298AB7008ED42B /* String+HTML.swift */; };
+		17F08DA0242A5776008ED42B /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F08D9F242A5776008ED42B /* BoardView.swift */; };
+		17F08DA2242A5D81008ED42B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F08DA1242A5D81008ED42B /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		176980712429643C009BE323 /* Bloom.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bloom.xcdatamodel; sourceTree = "<group>"; };
 		179994D623F8731F00902A69 /* Bloom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bloom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		179994D923F8731F00902A69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		179994DB23F8731F00902A69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,13 +33,11 @@
 		179994E823F8733400902A69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		179994EA23F8733400902A69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		179994F023F8740F00902A69 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
-		17B04D4923F881CE0028F43C /* BoardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardStore.swift; sourceTree = "<group>"; };
-		17B04D4B23F881E80028F43C /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
-		17B04D4D23F881FC0028F43C /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
-		17B04D4F23F882130028F43C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		17B04D5123F882210028F43C /* AddBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBoardView.swift; sourceTree = "<group>"; };
-		17B04D5423F8877F0028F43C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		17B04D5623F88B7B0028F43C /* Board+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Board+Extensions.swift"; sourceTree = "<group>"; };
+		17DA64B0242967D800926A31 /* AddBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBoardView.swift; sourceTree = "<group>"; };
+		17F08D9B24297F0A008ED42B /* BoardFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardFetcher.swift; sourceTree = "<group>"; };
+		17F08D9D24298AB7008ED42B /* String+HTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTML.swift"; sourceTree = "<group>"; };
+		17F08D9F242A5776008ED42B /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		17F08DA1242A5D81008ED42B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,15 +73,14 @@
 				179994D923F8731F00902A69 /* AppDelegate.swift */,
 				179994DB23F8731F00902A69 /* SceneDelegate.swift */,
 				179994E023F8731F00902A69 /* ContentView.swift */,
-				17B04D4923F881CE0028F43C /* BoardStore.swift */,
-				17B04D4B23F881E80028F43C /* BoardView.swift */,
-				17B04D4D23F881FC0028F43C /* PostView.swift */,
-				17B04D4F23F882130028F43C /* SettingsView.swift */,
-				17B04D5123F882210028F43C /* AddBoardView.swift */,
+				17F08D9F242A5776008ED42B /* BoardView.swift */,
+				17F08DA1242A5D81008ED42B /* WebView.swift */,
+				17DA64B0242967D800926A31 /* AddBoardView.swift */,
+				17F08D9D24298AB7008ED42B /* String+HTML.swift */,
+				17F08D9B24297F0A008ED42B /* BoardFetcher.swift */,
+				176980702429643C009BE323 /* Bloom.xcdatamodeld */,
 				179994F023F8740F00902A69 /* Board.swift */,
-				17B04D5623F88B7B0028F43C /* Board+Extensions.swift */,
 				179994E223F8733400902A69 /* Assets.xcassets */,
-				17B04D5323F8877F0028F43C /* Model.xcdatamodeld */,
 				179994E723F8733400902A69 /* LaunchScreen.storyboard */,
 				179994EA23F8733400902A69 /* Info.plist */,
 				179994E423F8733400902A69 /* Preview Content */,
@@ -170,17 +167,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17B04D4E23F881FC0028F43C /* PostView.swift in Sources */,
-				17B04D5023F882130028F43C /* SettingsView.swift in Sources */,
-				17B04D4A23F881CE0028F43C /* BoardStore.swift in Sources */,
 				179994DA23F8731F00902A69 /* AppDelegate.swift in Sources */,
+				17F08DA2242A5D81008ED42B /* WebView.swift in Sources */,
 				179994F123F8740F00902A69 /* Board.swift in Sources */,
-				17B04D4C23F881E80028F43C /* BoardView.swift in Sources */,
-				17B04D5723F88B7B0028F43C /* Board+Extensions.swift in Sources */,
+				17F08D9C24297F0A008ED42B /* BoardFetcher.swift in Sources */,
+				17F08D9E24298AB7008ED42B /* String+HTML.swift in Sources */,
 				179994E123F8731F00902A69 /* ContentView.swift in Sources */,
-				17B04D5523F8877F0028F43C /* Model.xcdatamodeld in Sources */,
 				179994DC23F8731F00902A69 /* SceneDelegate.swift in Sources */,
-				17B04D5223F882210028F43C /* AddBoardView.swift in Sources */,
+				17F08DA0242A5776008ED42B /* BoardView.swift in Sources */,
+				176980722429643C009BE323 /* Bloom.xcdatamodeld in Sources */,
+				17DA64B1242967D800926A31 /* AddBoardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,13 +372,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		17B04D5323F8877F0028F43C /* Model.xcdatamodeld */ = {
+		176980702429643C009BE323 /* Bloom.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				17B04D5423F8877F0028F43C /* Model.xcdatamodel */,
+				176980712429643C009BE323 /* Bloom.xcdatamodel */,
 			);
-			currentVersion = 17B04D5423F8877F0028F43C /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
+			currentVersion = 176980712429643C009BE323 /* Bloom.xcdatamodel */;
+			path = Bloom.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

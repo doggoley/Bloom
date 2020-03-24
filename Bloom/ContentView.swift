@@ -7,36 +7,61 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) var context
-
-    @FetchRequest(
-        entity: Board.entity(),
-        sortDescriptors: [
-            NSSortDescriptor(keyPath: \Board.short, ascending: false)
-        ]
-    ) var boards: FetchedResults<Board>
+    //var boards: [Board] = []
+    @State var isActive: Bool = false
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(entity: Board.entity(), sortDescriptors: [
+        NSSortDescriptor(keyPath: \Board.dateAdded, ascending: true)
+    ]) var boards: FetchedResults<Board>
     
     var body: some View {
         NavigationView {
             List {
                 Section {
-                    NavigationLink(destination: AddBoardView()) {
-                        Text("Add Board")
-                    }
+                    NavigationLink(
+                        destination: AddBoardView(isActive: $isActive),
+                        isActive: $isActive,
+                        label: {
+                            Button(action: {self.isActive = true},
+                                label: {
+                                    Text("Add boards")
+                                }
+                            )
+                        }
+                    )
                 }
                 
-                Section {
-                    ForEach (boards) { board in
-                        Text("/\(board.short ?? "Placeholder")/ - \(board.title ?? "Placeholder")")
-                        Text("Test")
+                Section {                    
+                    ForEach (boards, id: \.self) {board in
+                        NavigationLink(
+                            destination: BoardView(board: board.short ?? "Unknown"),
+                            //isActive: self.$isActive,
+                            label: {
+                                Button (action: {self.isActive = true},
+                                        label: {
+                                            Text("/\(board.short ?? "Unknown")/ - \(board.title ?? "Unknown")")
+                                        })
+                                .buttonStyle(DefaultButtonStyle())
+                            }
+                        )
+                        
                     }
+                    .onDelete(perform: deleteBoards)
                 }
             }
+            .navigationBarTitle(Text("Bloom"))
+            .listStyle(GroupedListStyle())
         }
-        .navigationBarTitle(Text("Bloom"))
-        .listStyle(GroupedListStyle())
+    }
+    
+    func deleteBoards(at offsets: IndexSet) {
+        for offset in offsets {
+            let board = boards[offset]
+            moc.delete(board)
+        }
     }
 }
 

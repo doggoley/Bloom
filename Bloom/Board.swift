@@ -9,24 +9,23 @@
 import Foundation
 import SwiftUI
 
-//extension Board : Identifiable {
-    // Moved to Core Data
-    
-    //var id = UUID()
+/*
+struct Board : Identifiable {
+    var id = UUID()
     
     // 4chan Board definition (https://a.4cdn.org/boards.json)
     // boards->board
-    //var short: String
+    var short: String
     // boards->title
-    //var title: String
+    var title: String
     // boards->ws_board (1->true, 0->false)
-    //var worksafe: Bool
+    var worksafe: Bool
     // boards->meta_description
-    //var description: String
+    var description: String
 
     // More definitions - https://github.com/4chan/4chan-API/blob/master/pages/Boards.md
-//}
-/*
+}
+
 #if DEBUG
     let testData = [
         Board(short: "g", title: "Technology", worksafe: true, description: "/g/ - Technology is 4chan's imageboard for discussing computer hardware and software, programming, and general technology."),
